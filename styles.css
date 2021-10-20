@@ -2,6 +2,7 @@
   height: 100vh;
   position: relative;
   background-color: red;
+  overflow: hidden;
 }
 
 .slider {
@@ -12,7 +13,7 @@
   top: 0;
   background: yellow;
   display: flex;
-  /* transition: all 1s; */
+  transition: all 1s;
 }
 
 .slide {

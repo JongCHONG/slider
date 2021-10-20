@@ -7,12 +7,18 @@ $(function() {
     })
     $('.right-arrow').click(function() {
         count = count - 1
+        if (count === -5) {
+            count = 0
+        }
         $(".slider").animate({
             left: `${count*100}%`
         })
     })
     $('.left-arrow').click(function() {
         count = count + 1
+        if (count === 1) {
+            count = -4
+        }
         $(".slider").animate({
             left: `${count*100}%`
         })

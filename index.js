@@ -23,6 +23,17 @@ $(function() {
             left: `${count*100}%`
         })
     })
-
-
+    setInterval(sliding, 5000)
+// setTimeout(function() {
+    
+// }, 2000);
+function sliding() {
+    count = count - 1
+    if (count === -5) {
+        count = 0
+    }
+    $(".slider").animate({
+        left: `${count*100}%`
+    })
+}
 })

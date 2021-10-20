@@ -1,11 +1,16 @@
 $(function() {
     var count = 0
+    var random = 0
     for (var i = 1; i <= 5; i++) {
-        $(`.slide:nth-child(${i})`).css("background-image", `url("https://picsum.photos/1600/900?t=${Math.random()}")`)
+        random = Math.random()
+        $(`.slide:nth-child(${i})`).css("background-image", `url("https://picsum.photos/1600/900?t=${random}")`)
     }
 
     $('.point').click(function() {
         count = $(this).index() * -1
+        random = Math.random()
+        console.log(random);
+        $(`.slide:nth-child(${count})`).css("background-image", `url("https://picsum.photos/1600/900?t=${random}")`)
         $(".slider").animate({
             left: `-${$(this).index()*100}%`
         })
